@@ -26,7 +26,7 @@
 		else
 			false
 		end
-		# puts counter
+		# puts counter	#this was my error source :(
 		# return counter Last thing method sees...
 	
 end

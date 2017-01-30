@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'raffle.rb'	#going to need a class
+require_relative 'raffle_offby_2.rb'	#going to need a class
 
 class Raffle_class < MiniTest::Test
 
