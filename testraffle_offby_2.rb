@@ -1,35 +1,26 @@
 require 'minitest/autorun'
-require_relative 'raffle_offby_2.rb'	#going to need a class
+require_relative 'raffle_offby_2.rb'
 
-class Raffle_class < MiniTest::Test
+class Test_Raffle_Function_offby_2 < MiniTest::Test
 
-	# def test_1_equals_1		# a test to test runninb
-	# 	assert_equal(1,1)
-	# end
-
-	def test_number_exists 	#1sttest
-		ticket_num = '1'
-		winning_num_array = []
-		assert_equal(false, raffle_function(ticket_num, winning_num_array))	#one way to build array
+	def test_off_by_1_equals_1		# a test to test runninb
+		# results = off_by_one
+		assert_equal(true, true)
 	end
 
-	def test_returns_true
-		ticket_num = '1234'  #some ticket num,	definitesly passes since hard coded
-		winning_num_array = ['1234']
-		assert_equal(true, raffle_function(ticket_num, winning_num_array))
-	end	
+	def test_same_number_returns_false
+		winning_num = '2237'
+		ticket_num = '2237'
+		results = close_but_not_quite(winning_num, ticket_num) #function but
+		assert_equal(false, results)
 
-	def test_ticket_returns_false_inarraayofmultiplenumbers #now iterate thru array, Prove it works 	()
-		ticket_num = '3456'
-		winning_num_array = ['1234', '1555', '6544', '7654']
-		assert_equal(false, raffle_function(ticket_num, winning_num_array))
-	end
-	
-	def test_ticket_returns_true_inarraayofmultiplenumbers #now iterate thru the array, Prove it works 	()
-		ticket_num = '1234'
-		winning_num_array = ['1234', '1555', '6544', '7654']
-		assert_equal(true, raffle_function(ticket_num, winning_num_array))
-						
 	end
 
+	def test_one_off_returns_true
+		winning_num = '1245'
+		ticket_num = '2245'
+		results = close_but_not_quite(winning_num, ticket_num)
+		assert_equal(true, results)
+
+	end
 end
