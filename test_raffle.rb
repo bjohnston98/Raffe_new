@@ -14,8 +14,15 @@ class Raffle_class < MiniTest::Test
 	end
 
 	def test_returns_true
-		ticket_num = '1234'  #some ticket num
+		ticket_num = '1234'  #some ticket num,	definitesly passes since hard coded
 		winning_num_array = ['1234']
 		assert_equal(true, raffle_function(ticket_num, winning_num_array))
 	end	
+
+	def method_name		#now iterate thru the array to Prove it works ()
+						
+	end
+
 end
+
+
